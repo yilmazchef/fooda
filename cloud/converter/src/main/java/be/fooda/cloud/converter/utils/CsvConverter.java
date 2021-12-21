@@ -1,6 +1,6 @@
 package be.fooda.cloud.converter.utils;
 
-import be.fooda.backend.converter.model.ListParam;
+import be.fooda.cloud.converter.model.ListParam;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.CsvToBean;

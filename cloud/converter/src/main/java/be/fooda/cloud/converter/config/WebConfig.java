@@ -1,7 +1,7 @@
 package be.fooda.cloud.converter.config;
 
-import be.fooda.backend.converter.utils.CsvConverter;
-import be.fooda.backend.converter.utils.YamlConverter;
+import be.fooda.cloud.converter.utils.CsvConverter;
+import be.fooda.cloud.converter.utils.YamlConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;

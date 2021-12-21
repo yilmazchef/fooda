@@ -1,7 +1,7 @@
 package be.fooda.cloud.converter.view.controller;
 
-import be.fooda.backend.converter.model.ConvertibleMediaTypes;
-import be.fooda.backend.converter.model.Product;
+import be.fooda.cloud.converter.model.ConvertibleMediaTypes;
+import be.fooda.cloud.converter.model.Product;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
