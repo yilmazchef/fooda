@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>backend</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>backend</name>
+    <description>Spring Boot sub-parent for backend modules.</description>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.vkod4java</groupId>
+        <artifactId>fooda</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modules>
+        <module>address</module>
+        <module>basket</module>
+        <module>contact</module>
+        <module>courier</module>
+        <module>customer</module>
+        <module>delivery</module>
+        <module>inventory</module>
+        <module>media</module>
+        <module>order</module>
+        <module>payment</module>
+        <module>product</module>
+        <module>ranking</module>
+        <module>review</module>
+        <module>store</module>
+    </modules>
+
+    <dependencies>
+
+        <!-- DOCUMENTATION FRAMEWORK: Swagger UI -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.10</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

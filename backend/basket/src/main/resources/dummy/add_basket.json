@@ -1,0 +1,50 @@
+{
+  "session": "session1",
+  "customer": {
+    "customerId": 1,
+    "billingAddressId": 0,
+    "deliveryAddressId": 0,
+    "billingContactId": 0,
+    "deliveryContactId": 0
+  },
+  "store": {
+    "storeId": 1,
+    "addressId": 0,
+    "contactId": 0
+  },
+  "products": [
+    {
+      "productId": 1,
+      "title": "Margherita Pizza",
+      "quantity": 10,
+      "price": 13,
+      "discount": 7,
+      "media": {
+        "mediaId": 24,
+        "url": "https://www.protislank.nl/slank/wp-content/uploads/2020/09/Proteinerijke-pizza-margarita-1-500x375.png"
+      }
+    },
+    {
+      "productId": 2,
+      "title": "Veggie Pizza",
+      "quantity": 6,
+      "price": 8,
+      "discount": 5,
+      "media": {
+        "mediaId": 22,
+        "url": "https://www.protislank.nl/slank/wp-content/uploads/2020/09/Proteinerijke-pizza-margarita-1-500x375.png"
+      }
+    },
+    {
+      "productId": 3,
+      "title": "Doner06",
+      "quantity": 8,
+      "price": 15,
+      "discount": 8,
+      "media": {
+        "mediaId": 23,
+        "url": "https://www.protislank.nl/slank/wp-content/uploads/2020/09/Proteinerijke-pizza-margarita-1-500x375.png"
+      }
+    }
+  ]
+}

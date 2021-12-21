@@ -1,0 +1,9 @@
+{
+  "limitPerOrder": 50,
+  "prices": [
+    {
+      "title": "Student Price",
+      "amount": 10.00
+    }
+  ]
+}

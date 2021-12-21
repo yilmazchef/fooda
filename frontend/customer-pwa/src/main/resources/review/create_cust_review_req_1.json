@@ -1,0 +1,9 @@
+{
+  "customerId": 1,
+  "review": "very tasty but delivery was a bit late. thanx for the quality.",
+  "session": "123azerty",
+  "billingAddressId": 1,
+  "deliveryAddressId": 2,
+  "billingContactId": 1,
+  "deliveryContactId": 2
+}

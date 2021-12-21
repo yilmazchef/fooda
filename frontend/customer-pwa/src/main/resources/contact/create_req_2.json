@@ -1,0 +1,12 @@
+{
+  "userId": 1,
+  "title": "business",
+  "isCurrent": false,
+  "firstName": "John",
+  "familyName": "Doe",
+  "companyName": "VDAB",
+  "mobilePhoneNumber": "0032461119999",
+  "linePhoneNumber": "00322214587",
+  "email": "yilmaz.mustafa@vdab.be",
+  "canCall": false
+}

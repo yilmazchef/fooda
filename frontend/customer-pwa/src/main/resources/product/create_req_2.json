@@ -1,0 +1,59 @@
+{
+  "title": "Pizza Margherita",
+  "description": "The best pizza in town.",
+  "limitPerOrder": 50,
+  "isFeatured": true,
+  "storeId": 11,
+  "type": "SIMPLE",
+  "prices": [
+    {
+      "title": "Default Price",
+      "amount": 12.50
+    },
+    {
+      "title": "Student Price",
+      "amount": 9.00
+    }
+  ],
+  "taxes": [
+    {
+      "title": "Default Tax",
+      "percentage": 0.21,
+      "isDefault": true
+    }
+  ],
+  "defaultImageId": 321,
+  "categories": [
+    {
+      "title": "pizza"
+    },
+    {
+      "title": "vegan"
+    }
+  ],
+  "tags": [
+    {
+      "value": "best selling"
+    },
+    {
+      "value": "pizza"
+    },
+    {
+      "value": "vegeterian"
+    }
+  ],
+  "ingredients": [
+    {
+      "title": "tomatoes",
+      "price": 1.00
+    },
+    {
+      "title": "buffalo mozzarella",
+      "price": 2.50
+    },
+    {
+      "title": "basilicum",
+      "price": 0.50
+    }
+  ]
+}

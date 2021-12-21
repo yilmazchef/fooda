@@ -1,0 +1,26 @@
+{
+  "trackingId" : "asfsfdfdfer",
+  "isActive" : true,
+  "deliveryId" : 1,
+  "customerId" : 1,
+  "storeId" : 1,
+  "status" : "CONFIRMED_BY_KITCHEN",
+  "note" : "The doorbell does not work. Please call at the door",
+  "requiredAt" : "2019-10-09T22:17:18.734Z",
+  "createdAt" : "2019-10-09T22:17:18.734Z",
+  "updatedAt" : "2019-10-09T22:17:18.734Z",
+  "deliveredAt" : "2019-10-09T22:17:18.734Z",
+  "paymentAt" : "2019-10-09T22:17:20.734Z",
+  "productsTotal" : 30.00,
+  "taxTotal" : 10.00,
+  "deliveryTotal" : 10.00,
+  "priceTotal" :50.00,
+  "products" :[
+    1,
+    2
+  ],
+  "payments" :[
+    1,
+    2
+  ]
+}

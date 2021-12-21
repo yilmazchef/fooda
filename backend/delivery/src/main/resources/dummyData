@@ -1,0 +1,94 @@
+//create
+{
+  "courier": {
+    "externalCourierId": 547,
+    "familyName": "kannouf",
+    "firstName": "nozha",
+    "profilePhotoUrl": "string"
+  },
+  "customer": {
+    "canCall": true,
+    "email": "string@gmail.com",
+    "externalCustomerId": 748,
+    "familyName": "kannouf",
+    "firstName": "nozha",
+    "phone": "488296046"
+  },
+  "deliveryTrackingId": 3654,
+  "note": "delivery tracking id",
+  "order": {
+    "externalOrderId": 6583,
+    "isPaid": true,
+    "note": "order note",
+    "total": 89
+  },
+  "payment": {
+    "externalPaymentId": 2589,
+    "isSucceed": true,
+    "note": "payment note"
+  },
+  "products": [
+    {
+      "externalProductId": 3247,
+      "productName": "burger fish",
+      "note": "product note"
+    }
+  ],
+  "requestedDateTime": "2021-01-22 23:59",
+  "status": "ON_DELIVERY_PARENT",
+  "store": {
+    "address": "intec straat",
+    "email": "string@gmail.com",
+    "externalStoreId": 6712,
+    "phone": "488296046",
+    "storeName": "Pizza Hut"
+  }
+}
+
+//update
+{
+  "courier": {
+    "externalCourierId": 547,
+    "familyName": "kannouf",
+    "firstName": "nozha",
+    "profilePhotoUrl": "updated"
+  },
+  "customer": {
+    "canCall": false,
+    "email": "updated@gmail.com",
+    "externalCustomerId": 748,
+    "familyName": "kannouf",
+    "firstName": "nozha",
+    "phone": "488296046"
+  },
+  "deliveredDateTime": "2021-02-12 18:30",
+  "deliveryTrackingId": 3654,
+  "note": "delivery is done",
+  "order": {
+    "externalOrderId": 6583,
+    "isPaid": true,
+    "note": "order note",
+    "total": 89
+  },
+  "payment": {
+    "externalPaymentId": 2589,
+    "isSucceed": true,
+    "note": "payment note updated"
+  },
+  "products": [
+    {
+      "externalProductId": 6985,
+      "productName": "XL burger fish",
+      "note": "product note"
+    }
+  ],
+  "requestedDateTime": "2021-01-23 23:59",
+  "status": "ON_DELIVERY_PARENT",
+  "store": {
+    "address": "intec straat",
+    "email": "string@gmail.com",
+    "externalStoreId": 6712,
+    "phone": "488296046",
+    "storeName": "Pizza Hut"
+  }
+}

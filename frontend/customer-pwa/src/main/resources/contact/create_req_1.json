@@ -1,0 +1,12 @@
+{
+  "userId": 1,
+  "title": "personal",
+  "isCurrent": true,
+  "firstName": "John",
+  "familyName": "Doe",
+  "companyName": "Intec",
+  "mobilePhoneNumber": "0032461110000",
+  "linePhoneNumber": "00322210055",
+  "email": "yilmaz@mail.be",
+  "canCall": true
+}

@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "amount": 25,
+      "paymentMethod": "ON_DELIVERY_CASH"
+    }
+  ],
+  "note": "i wish i used fooda coin",
+  "order": {
+    "externalOrderId": 123,
+    "orderTime": "2020-11-29T01:01:37.300Z",
+    "store": {
+      "externalStoreId": 11,
+      "name": "Manhattan's"
+    }
+  },
+  "user": {
+    "externalUserId": 1986,
+    "login": "yilmazchef"
+  }
+}

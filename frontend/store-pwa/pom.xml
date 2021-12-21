@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Vaadin project from https://start.vaadin.com/project/19b61901-e6e9-4803-bf9c-5cf2396fb6a8 -->
+
+    <artifactId>store-pwa</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>store-pwa</name>
+    <description>Spring Boot microservice module for store frontend using Vaadin flow.</description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <start-class>be.fooda.frontend.store.StoreApp</start-class>
+    </properties>
+
+    <parent>
+        <groupId>org.vkod4java</groupId>
+        <artifactId>frontend</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+
+</project>

@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "name": "ADDRESS_BACKEND_URL",
+      "type": "java.lang.String",
+      "description": "Description for ADDRESS_BACKEND_URL."
+    },
+    {
+      "name": "BASKET_BACKEND_URL",
+      "type": "java.lang.String",
+      "description": "Description for BASKET_BACKEND_URL."
+    },
+    {
+      "name": "CONTACT_BACKEND_URL",
+      "type": "java.lang.String",
+      "description": "Description for CONTACT_BACKEND_URL."
+    }
+  ]

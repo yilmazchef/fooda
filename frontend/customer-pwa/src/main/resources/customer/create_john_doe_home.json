@@ -1,0 +1,10 @@
+{
+  "title": "Mr",
+  "firstName": "John",
+  "familyName": "Doe",
+  "dateOfBirth": "01/01/1990",
+  "note": "A note",
+  "userId": 1,
+  "addressId": 1,
+  "contactId": 1
+}

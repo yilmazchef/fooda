@@ -1,0 +1,23 @@
+{
+  "id": 34,
+  "door": "2",
+  "house": "44",
+  "street": "Melkstraat",
+  "municipality": "Mechelen",
+  "postcode": "1830",
+  "city": "Mechelen",
+  "region": "Antwerpen",
+  "country": "Belgium",
+  "countryCode": "99",
+  "isActive": true,
+  "title" : "myhome",
+  "isCurrent" : true,
+  "registeredAt" : "21.02.2020",
+  "updatedAt" : "08.09.2020",
+  "userId" : 66,
+  "coordinate":
+  {
+    "latitude": 9547,
+    "longitude": 3654
+  }
+}

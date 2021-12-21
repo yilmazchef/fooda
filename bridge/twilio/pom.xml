@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.vkod4java</groupId>
+        <artifactId>bridge</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>twilio</artifactId>
+    <version>latest</version>
+    <name>twilio</name>
+    <description>
+        Twilio Programmable SMS API helps you add robust messaging capabilities to your applications.
+        Using this REST API, you can send and receive SMS messages, track the delivery of sent messages, and retrieve
+        and modify message history.
+    </description>
+    <packaging>jar</packaging>
+
+    <properties>
+        <start-class>be.fooda.bridge.twilio.TwilioApp</start-class>
+        <spring-boot.build-image.imageName>$DOCKER_USER_NAME$/${parent.artifactId}-${project.artifactId}</spring-boot.build-image.imageName>
+    </properties>
+
+    <dependencies>
+
+        <!-- TWILIO PROGRAMMABLE MESSAGE SDK -->
+        <dependency>
+            <groupId>com.twilio.sdk</groupId>
+            <artifactId>twilio</artifactId>
+            <version>8.19.1</version>
+        </dependency>
+
+        <!-- JSON WEB TOKEN -->
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>9.14</version>
+        </dependency>
+
+    </dependencies>
+
+
+
+</project>

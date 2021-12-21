@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "amount": 10,
+      "paymentMethod": "ON_DELIVERY_CASH"
+    }
+  ],
+  "note": "Payment note",
+  "order": {
+    "externalOrderId": 1,
+    "store": {
+      "externalStoreId": 1,
+      "name": "Burger Ting"
+    }
+  },
+  "status": "ALL_PAID",
+  "user": {
+    "externalUserId": 1,
+    "login": "32488490509"
+  }
+}
+
+
+{
+  "items": [
+    {
+      "amount": 5,
+      "paymentMethod": "ON_DELIVERY_CASH"
+    },
+    {
+      "amount": 10,
+      "paymentMethod": "ONLINE_CREDIT_CARD"
+    }
+  ],
+  "note": "Partial Payment note",
+  "order": {
+    "externalOrderId": 2,
+    "store": {
+      "externalStoreId": 1,
+      "name": "Burger Ting"
+    }
+  },
+  "status": "PARTIALLY_PAID",
+  "user": {
+    "externalUserId": 2,
+    "login": "32488490509"
+  }
+}

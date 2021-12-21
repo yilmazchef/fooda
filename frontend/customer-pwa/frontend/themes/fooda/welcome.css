@@ -1,0 +1,23 @@
+:host("welcome-view") .logo {
+    margin-top: 4vh;
+    width: 268px;
+    height: 261px;
+}
+
+:host("welcome-view") .slogan {
+    padding-top: 10vh;
+    background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+:host("welcome-view") .next {
+    margin-top: 26vh;
+}
+
+@media (max-width: 768px) {
+    :host("welcome-view") .logo {
+        width: 215px;
+        height: 209px;
+    }
+}

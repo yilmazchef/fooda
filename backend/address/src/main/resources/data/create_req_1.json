@@ -1,0 +1,24 @@
+{
+  "id": 123,
+  "door": "5",
+  "house": "95",
+  "street": "Koning",
+  "municipality": "Woluwe",
+  "postcode": "1150",
+  "city": "Brussel",
+  "region": "Brussel Hoofdstaad",
+  "country": "Belgium",
+  "countryCode": "32",
+  "isActive": true,
+  "title" : "home",
+  "isCurrent" : true,
+  "registeredAt" : "12.12.2020",
+  "updatedAt" : "02.10.2021",
+  "userId" : 11,
+  "coordinate":
+    {
+      "latitude": 1254,
+      "longitude":1254
+    }
+
+}

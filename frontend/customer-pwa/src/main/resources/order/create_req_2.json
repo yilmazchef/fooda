@@ -1,0 +1,26 @@
+{
+  "trackingId" : "azerty",
+  "isActive" : true,
+  "deliveryId" : 2,
+  "customerId" : 1,
+  "storeId" : 2,
+  "status" : "CONFIRMED_BY_KITCHEN",
+  "note" : "The doorbell does not work. Please call at the door",
+  "requiredAt" : "2019-10-10T22:17:18.734Z",
+  "createdAt" : "2019-10-10T22:17:18.734Z",
+  "updatedAt" : "2019-10-10T22:17:18.734Z",
+  "deliveredAt" : "2019-10-10T22:17:18.734Z",
+  "paymentAt" : "2019-10-10T22:17:18.734+00:00",
+  "productsTotal" : 30.00,
+  "taxTotal" : 10.00,
+  "deliveryTotal" : 10.00,
+  "priceTotal" :50.00,
+  "products" :[
+    1,
+    2
+  ],
+  "payments" :[
+    1,
+    2
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "customerId": 4,
+  "ranking": 6,
+  "session": "123qwerty",
+  "billingAddressId": 4,
+  "deliveryAddressId": 3,
+  "billingContactId": 4,
+  "deliveryContactId": 3
+}

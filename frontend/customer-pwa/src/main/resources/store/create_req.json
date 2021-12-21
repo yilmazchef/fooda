@@ -1,0 +1,43 @@
+{
+    "title": "Pizzify",
+    "slogan": "The best Italian in town.",
+    "type": "CHAIN",
+    "parentId": 1,
+    "about": "Some thing about the pizzeria.",
+    "bgImageId": 123,
+    "addressId": 321,
+    "contactId": 254,
+    "products": [
+        1,2,3,4
+    ],
+    "auth": {
+        "authKey": "123azerty",
+        "secret": "321qwerty",
+        "expiryDate": "11/03/2026",
+        "siteUrl": "https://www.fooda.be/pizzify/home",
+        "storeUrl": "https://www.fooda.be/pizzify/shop"
+    },
+    "payments": [
+        {
+            "method": "CASH",
+            "minOrderAmount": 5,
+            "expiryDate": "01/01/2030"
+        }
+    ],
+    "deliveries": [
+        {
+            "postcode": "9240",
+            "deliveryDuration": 30,
+            "minOrderPrice": 10,
+            "maxOrderPrice": 150,
+            "deliveryCost": 2
+        }
+    ],
+    "schedules": [
+        {
+            "opens": "09:00",
+            "closes": "17:00"
+        }
+    ],
+    "etrackingId": "123sfx"
+}

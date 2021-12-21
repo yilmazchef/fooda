@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bridge</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>bridge</name>
+    <description>Spring Boot sub-parent for bridge modules.</description>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.vkod4java</groupId>
+        <artifactId>fooda</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modules>
+        <module>currency</module>
+        <module>paypal</module>
+        <module>qrcode</module>
+        <module>twilio</module>
+    </modules>
+
+    <dependencies>
+
+        <!-- DOCUMENTATION FRAMEWORK: Swagger UI -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.5.10</version>
+        </dependency>
+
+        <!-- HTTP CLIENT: Square -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.10.0-RC1</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

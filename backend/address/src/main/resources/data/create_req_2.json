@@ -1,0 +1,23 @@
+{
+  "id": 568,
+  "door": "7",
+  "house": "12",
+  "street":"Luisa",
+  "municipality": "Kessel-Lo",
+  "postcode": "3010",
+  "city": "Leuven",
+  "region": "Vlaams Brabant",
+  "country": "Belgium",
+  "countryCode": "45",
+  "isActive": true,
+  "title" : "job",
+  "isCurrent" : true,
+  "registeredAt" : "15.08.2020",
+  "updatedAt" : "21.10.2020",
+  "userId" : 15,
+  "coordinate":
+  {
+    "latitude": 2457,
+    "longitude": 2547
+  }
+}

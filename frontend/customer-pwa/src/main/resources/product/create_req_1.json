@@ -1,0 +1,58 @@
+{
+  "title": "Iskender Kebab",
+  "description": "The best Turkish food in town.",
+  "limitPerOrder": 10,
+  "isFeatured": true,
+  "storeId": 11,
+  "type": "SIMPLE",
+  "prices": [
+    {
+      "title": "Default Price",
+      "amount": 20.00
+    }
+  ],
+  "defaultImageId": 369,
+  "categories": [
+    {
+      "title": "pizza"
+    },
+    {
+      "title": "meat"
+    }
+  ],
+  "tags": [
+    {
+      "value": "best selling"
+    },
+    {
+      "value": "pizza"
+    },
+    {
+      "value": "salami"
+    },
+    {
+      "value": "spek"
+    },
+    {
+      "value": "jambon"
+    }
+  ],
+  "ingredients": [
+    {
+      "title": "salami",
+      "price": 1.00
+    },
+    {
+      "title": "mozzarella",
+      "price": 2.50
+    },
+    {
+      "title": "spek",
+      "price": 1.50
+    },
+    {
+      "title": "jambon",
+      "price": 1.25
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "session": "session1",
+  "customer": {
+    "customerId": 1,
+    "billingAddressId": 1,
+    "deliveryAddressId": 1,
+    "billingContactId": 1,
+    "deliveryContactId": 1
+  },
+  "store": {
+    "storeId": 3,
+    "addressId": 3,
+    "contactId": 3
+  },
+  "products": [
+    {
+      "productId": 9,
+      "title": "Pizza Meatfull",
+      "quantity": 3,
+      "price": 13,
+      "discount": 5,
+      "media": {
+        "mediaId": 1,
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0e/91/74/8f/delicious-pizza.jpg"
+      }
+    },{
+      "productId": 10,
+      "title": "Doner",
+      "quantity": 3,
+      "price": 13,
+      "discount": 5,
+      "media": {
+        "mediaId": 1,
+        "url": "https://www.takeaway.com/foodwiki/uploads/sites/11/2019/08/doner_kebab_2-1080x960.jpg"
+      }
+    }
+  ]
+}
