@@ -1,7 +1,5 @@
-package be.fooda.backend.auth.security;
+package be.fooda.security.auth.security;
 
-import be.fooda.backend.auth.dao.UserRepository;
-import be.fooda.backend.auth.model.entity.UserEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -9,6 +7,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import be.fooda.security.auth.dao.UserRepository;
+import be.fooda.security.auth.model.entity.UserEntity;
 
 import java.util.stream.Collectors;
 
@@ -31,7 +32,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new User(
                 userEntity.getLogin(),
                 userEntity.getPassword(),
-                userEntity.getRoles().stream().map(roleEntity -> new SimpleGrantedAuthority(roleEntity.name())).collect(Collectors.toSet())
-        );
+                userEntity.getRoles().stream().map(roleEntity -> new SimpleGrantedAuthority(roleEntity.name()))
+                        .collect(Collectors.toSet()));
     }
 }

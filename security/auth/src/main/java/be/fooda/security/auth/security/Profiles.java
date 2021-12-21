@@ -1,4 +1,4 @@
-package be.fooda.backend.auth.security;
+package be.fooda.security.auth.security;
 
 public class Profiles {
 

@@ -39,8 +39,17 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.5.10</version>
+            <version>1.6.1</version>
         </dependency>
+
+
+        <!-- Swagger Annotations -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.hibernate.search</groupId>
@@ -50,7 +59,7 @@
 
         <dependency>
             <groupId>org.hibernate.search</groupId>
-            <artifactId>hibernate-search-security-lucene</artifactId>
+            <artifactId>hibernate-search-backend-lucene</artifactId>
             <version>6.0.0.CR2</version>
         </dependency>
 

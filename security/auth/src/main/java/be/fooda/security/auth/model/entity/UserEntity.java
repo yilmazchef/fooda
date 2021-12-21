@@ -1,4 +1,4 @@
-package be.fooda.backend.auth.model.entity;
+package be.fooda.security.auth.model.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

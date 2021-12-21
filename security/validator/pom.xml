@@ -9,9 +9,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>security-validator</artifactId>
+    <artifactId>validator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>security-validator</name>
+    <name>validator</name>
     <description>Spring Boot microservice module for Fooda store security</description>
     <packaging>jar</packaging>
 

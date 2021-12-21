@@ -1,4 +1,4 @@
-package be.fooda.backend.auth.model;
+package be.fooda.security.auth.model;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;

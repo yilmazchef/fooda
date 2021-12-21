@@ -1,9 +1,10 @@
 
-package be.fooda.backend.auth.dao;
+package be.fooda.security.auth.dao;
 
-import be.fooda.backend.auth.model.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import be.fooda.security.auth.model.entity.UserEntity;
 
 import java.util.UUID;
 

@@ -1,5 +1,4 @@
-package be.fooda.backend.auth.model.entity;
-
+package be.fooda.security.auth.model.entity;
 
 public enum RoleEntity {
     ROLE_FOODA_PARENT,

@@ -1,4 +1,4 @@
-package be.fooda.backend.auth.security;
+package be.fooda.security.auth.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

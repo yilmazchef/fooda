@@ -1,4 +1,4 @@
-package be.fooda.backend.auth.security;
+package be.fooda.security.auth.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Profile;
