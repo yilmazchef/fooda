@@ -1,21 +1,18 @@
 package be.fooda.frontend.della.data.generator;
 
-import com.vaadin.flow.spring.annotation.SpringComponent;
-
-import be.fooda.frontend.della.data.service.UserRepository;
-import be.fooda.frontend.della.data.entity.User;
 import java.util.Collections;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import be.fooda.frontend.della.data.Role;
 
-import java.time.LocalDateTime;
+import com.vaadin.flow.spring.annotation.SpringComponent;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
-import com.vaadin.exampledata.DataType;
-import com.vaadin.exampledata.ExampleDataGenerator;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+import be.fooda.frontend.della.data.Role;
+import be.fooda.frontend.della.data.entity.User;
+import be.fooda.frontend.della.data.service.UserRepository;
 
 @SpringComponent
 public class DataGenerator {

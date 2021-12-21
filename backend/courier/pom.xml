@@ -19,6 +19,7 @@
         <start-class>be.fooda.backend.courier.CourierApp</start-class>
         <mysql.version>8.0.27</mysql.version>
         <hibernate.version>5.4.23.Final</hibernate.version>
+        <spring-boot.build-image.imageName>$DOCKER_USER_NAME$/${parent.artifactId}-${project.artifactId}</spring-boot.build-image.imageName>
     </properties>
 
     <dependencies>

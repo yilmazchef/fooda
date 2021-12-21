@@ -10,9 +10,10 @@
     <description>Spring Boot sub-parent for frontend modules.</description>
     <packaging>pom</packaging>
 
-
     <properties>
-        <vaadin.version>22.0.1</vaadin.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <vaadin.version>21.0.3</vaadin.version>
     </properties>
 
     <parent>
@@ -26,6 +27,20 @@
         <module>customer-pwa</module>
         <module>store-pwa</module>
     </modules>
+
+    <developers>
+        <developer>
+            <email>yilmaz.mustafa@intecbrussel.be</email>
+            <organization>Intec Brussel</organization>
+            <roles>
+                <role>Java Instructor</role>
+                <role>Python Instructor</role>
+            </roles>
+            <organizationUrl>https://www.intecbrussel.be</organizationUrl>
+            <url>https://checkinout.intecbrussel.be</url>
+            <timezone>Brussel</timezone>
+        </developer>
+    </developers>
 
     <repositories>
         <!-- The order of definitions matters. Explicitly defining central here to make sure it has the highest priority. -->
@@ -51,6 +66,11 @@
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
+        </repository>
+
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
     </repositories>
 
@@ -84,14 +104,21 @@
     </dependencyManagement>
 
     <dependencies>
+
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
-            <artifactId>vaadin</artifactId>
+            <artifactId>vaadin-core</artifactId>
         </dependency>
+
         <dependency>
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <dependency>
@@ -99,24 +126,79 @@
             <artifactId>vaadin-testbench</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Include JUnit 4 support for TestBench and others -->
-        <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.hamcrest</groupId>
-                    <artifactId>hamcrest-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>4.4.0</version>
+            <version>5.0.2</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.wontlost</groupId>
+            <artifactId>zxing-vaadin</artifactId>
+            <version>1.0.2-8</version>
+        </dependency>
+
+        <!--        GEO LOCATION API VAADIN 14+ -->
+        <dependency>
+            <groupId>org.vaadin.elmot</groupId>
+            <artifactId>vaadin-geo-location-flow-v14</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <!--        GEO LOCATION CALCULATOR & VALIDATION API -->
+        <dependency>
+            <groupId>com.github.grumlimited</groupId>
+            <artifactId>geocalc</artifactId>
+            <version>0.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.vaadin.artur/a-vaadin-helper -->
+        <dependency>
+            <groupId>org.vaadin.artur</groupId>
+            <artifactId>a-vaadin-helper</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.vaadin.artur.exampledata</groupId>
+            <artifactId>exampledata</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.appreciated</groupId>
+            <artifactId>card</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- SPRING DATABASE FRAMEWORK -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+
     </dependencies>
+
 
 </project>
