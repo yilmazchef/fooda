@@ -11,7 +11,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 public class GatewayApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(be.fooda.backend.gateway.server.FoodaGatewayApp.class, args);
+		SpringApplication.run(GatewayApp.class, args);
 	}
 
 }

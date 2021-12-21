@@ -8,8 +8,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableAdminServer
-public class FoodaAdminApp {
+public class AdminApp {
 	public static void main(String[] args) {
-	      SpringApplication.run(FoodaAdminApp.class, args);
+	      SpringApplication.run(AdminApp.class, args);
       }
 }
