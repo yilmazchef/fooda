@@ -24,6 +24,7 @@ import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 
 import javax.annotation.PostConstruct;
 import java.math.BigDecimal;
@@ -72,7 +73,8 @@ public class ProductView extends VerticalLayout {
 
     // FIXME: cognitive complexity
     public ProductView(@Autowired AuthenticatedUser authenticatedUser,
-                       @Autowired ProductClient productClient, @Autowired BasketClient basketClient, @Autowired MediaClient mediaClient) {
+            @Autowired ProductClient productClient, @Autowired BasketClient basketClient,
+            @Autowired MediaClient mediaClient) {
 
         final var pagingInfo = new Label("Paging:");
         final var pageNo = new NumberField("Page No");
@@ -89,52 +91,51 @@ public class ProductView extends VerticalLayout {
                     productClient.search(
                             searchField.getValue().toLowerCase(Locale.ROOT),
                             pageNo.getValue().intValue(),
-                            pageSize.getValue().intValue()
-                    );
+                            pageSize.getValue().intValue());
+                });
+
+        final var findAllResponse = productClient.findAll(pageNo.getValue().intValue(), pageSize.getValue().intValue());
+
+        if (findAllResponse.getStatusCode() == HttpStatus.FOUND) {
+            for (ProductResponse productResponse : findAllResponse.getBody()) {
+                final var productItemLayout = new ProductItemLayout(productResponse);
+
+                var prices = new Object() {
+                    BigDecimal defaultPrice = BigDecimal.ZERO;
+                };
+                for (PriceResponse priceResponse : productResponse.getPrices()) {
+                    if (priceResponse.getIsDefault()) {
+                        prices.defaultPrice = priceResponse.getAmount();
+                        break;
+                    }
                 }
-        );
 
+                productItemLayout.getAddToCartButton().addClickListener(onClick -> {
 
-        final var products = productClient.findAll(pageNo.getValue().intValue(), pageSize.getValue().intValue());
-        for (ProductResponse productResponse : products) {
-            final var productItemLayout = new ProductItemLayout(productResponse);
+                    final var existsResponse = basketClient.exists(session, productResponse.getStore().getStoreId());
 
-            var prices = new Object() {
-                BigDecimal defaultPrice = BigDecimal.ZERO;
-            };
-            for (PriceResponse priceResponse : productResponse.getPrices()) {
-                if (priceResponse.getIsDefault()) {
-                    prices.defaultPrice = priceResponse.getAmount();
-                    break;
-                }
+                    if (existsResponse.getStatusCode() == HttpStatus.FOUND) {
+                        basketClient.create(
+                                new CreateBasketRequest()
+                                        .withSession(session)
+                                        .withStore(
+                                                new CreateStoreRequest()
+                                                        .withStoreId(productResponse.getStore().getStoreId()))
+                                        .withProducts(
+                                                Set.of(
+                                                        new CreateProductRequest()
+                                                                .withProductId(productResponse.getProductId())
+                                                                .withQuantity(1.00)
+                                                                .withPrice(prices.defaultPrice))));
+                    } else {
+                        Notification.show(
+                                "Product is already in the basket! Please update quantity by visiting basket page.",
+                                4000, Notification.Position.BOTTOM_CENTER).open();
+                    }
+                });
+
+                productListLayout.add(productItemLayout);
             }
-
-            productItemLayout.getAddToCartButton().addClickListener(onClick -> {
-                final var basketExists = basketClient.exists(session, productResponse.getStore().getStoreId());
-                if (!basketExists) {
-                    basketClient.create(
-                            new CreateBasketRequest()
-                                    .withSession(session)
-                                    .withStore(
-                                            new CreateStoreRequest()
-                                                    .withStoreId(productResponse.getStore().getStoreId())
-                                    )
-                                    .withProducts(
-                                            Set.of(
-                                                    new CreateProductRequest()
-                                                            .withProductId(productResponse.getProductId())
-                                                            .withQuantity(1.00)
-                                                            .withPrice(prices.defaultPrice)
-                                            )
-                                    )
-                    );
-                } else {
-                    Notification.show("Product is already in the basket! Please update quantity by visiting basket page.",
-                    4000, Notification.Position.BOTTOM_CENTER).open();
-                }
-            });
-
-            productListLayout.add(productItemLayout);
         }
 
         searchLayout.add(searchField, searchButton);

@@ -8,6 +8,9 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+
+import java.util.ArrayList;
 
 import javax.annotation.security.PermitAll;
 
@@ -24,18 +27,17 @@ public class OrderView extends VerticalLayout {
         // CSS
         addClassNames("order-view", "flex", "flex-col", "h-full");
 
-        final var orderResponseList = orderClient.findAll(1, 25);
+        final var orderResponse = orderClient.findAll(1, 25);
 
-        if (!orderResponseList.isEmpty()) {
+        final var orders = (orderResponse.getStatusCode() == HttpStatus.FOUND)
+                ? orderResponse.getBody()
+                : new ArrayList<OrderResponse>();
 
-            for (OrderResponse orderResponse : orderResponseList) {
-                final var orderItemLayout = new OrderItemLayout(orderResponse);
-                orderItemsLayout.add(orderItemLayout);
-            }
-
+        for (OrderResponse order : orders) {
+            final var orderItemLayout = new OrderItemLayout(order);
+            orderItemsLayout.add(orderItemLayout);
         }
 
     }
 
 }
-

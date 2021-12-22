@@ -5,6 +5,9 @@ import be.fooda.frontend.customer.client.MediaClient;
 import be.fooda.frontend.customer.data.dto.basket.BasketResponse;
 import be.fooda.frontend.customer.data.dto.basket.ProductResponse;
 import be.fooda.frontend.customer.views.MainLayout;
+
+import java.util.ArrayList;
+
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -13,6 +16,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.VaadinSession;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 
 @PageTitle("Fooda | Basket")
 @Route(value = "basket", layout = MainLayout.class)
@@ -33,12 +37,15 @@ public class BasketView extends VerticalLayout {
     // ACTIONS
     private final VerticalLayout actionsLayout = new VerticalLayout();
 
-
     public BasketView(@Autowired BasketClient basketClient, @Autowired MediaClient mediaClient) {
 
         addClassNames("basket-view", "flex", "flex-col", "h-full");
 
-        final var basketResponseList = basketClient.findBySession(session);
+        final var findResponse = basketClient.findBySession(session);
+
+        final var basketResponseList = (findResponse.getStatusCode() == HttpStatus.FOUND)
+                ? findResponse.getBody()
+                : new ArrayList<BasketResponse>();
 
         if (!basketResponseList.isEmpty()) {
 
@@ -49,7 +56,9 @@ public class BasketView extends VerticalLayout {
                     final var basketProductLayout = new BasketItemLayout(productResponse);
 
                     basketProductLayout.getUpdateButton().addClickListener(onClick -> {
-                        Notification.show(productResponse.getTitle() + " X " + basketProductLayout.getQuantityField().getValue()).open();
+                        Notification.show(
+                                productResponse.getTitle() + " X " + basketProductLayout.getQuantityField().getValue())
+                                .open();
                     });
 
                     basketItemGroupLayout.add(basketProductLayout);

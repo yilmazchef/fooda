@@ -1,17 +1,17 @@
 package be.fooda.backend.payment.view.client;
 
-import be.fooda.backend.payment.model.extension.RestClient;
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
-import org.springframework.beans.factory.annotation.Value;
+import java.util.LinkedHashMap;
+import java.util.Objects;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.LinkedHashMap;
-import java.util.Objects;
+import be.fooda.backend.payment.model.extension.RestClient;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 // LOMBOK
 @RequiredArgsConstructor
@@ -37,6 +37,7 @@ public class MediaClient {
         final var response = restTemplate.exchange(url, HttpMethod.GET, HttpEntity.EMPTY, Boolean.class, params);
 
         // RETURN STORE_EXISTS_BY_ID
-        return response.getStatusCode() == HttpStatus.FOUND && response.hasBody() && Objects.equals(response.getBody(), Boolean.TRUE);
+        return response.getStatusCode() == HttpStatus.FOUND && response.hasBody()
+                && Objects.equals(response.getBody(), Boolean.TRUE);
     }
 }

@@ -47,3 +47,6 @@ frontend/store-pwa/node_modules/
 frontend/courier-pwa/target/
 frontend/customer-pwa/target/
 frontend/store-pwa/target/
+frontend/courier-pwa/frontend/generated/
+frontend/customer-pwa/frontend/generated/
+frontend/store-pwa/frontend/generated/

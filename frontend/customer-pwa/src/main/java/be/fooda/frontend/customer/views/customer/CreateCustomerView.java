@@ -1,7 +1,7 @@
 package be.fooda.frontend.customer.views.customer;
 
-
 import be.fooda.frontend.customer.client.CustomerClient;
+import be.fooda.frontend.customer.data.dto.basket.CustomerResponse;
 import be.fooda.frontend.customer.data.dto.customer.CreateCustomerRequest;
 import be.fooda.frontend.customer.security.AuthenticatedUser;
 import be.fooda.frontend.customer.views.MainLayout;
@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.annotation.security.PermitAll;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.util.Optional;
 
 @PageTitle("Fooda | Customer")
 @Route(value = "customer/create", layout = MainLayout.class) // http://localhost:8888/customer/create
@@ -24,7 +25,8 @@ public class CreateCustomerView extends VerticalLayout {
 
     private final CustomerLayout createCustomerLayout = new CustomerLayout();
 
-    public CreateCustomerView(@Autowired CustomerClient customerClient, @Autowired AuthenticatedUser authenticatedUser) {
+    public CreateCustomerView(@Autowired CustomerClient customerClient,
+            @Autowired AuthenticatedUser authenticatedUser) {
 
         final var oUser = authenticatedUser.get();
 
@@ -34,25 +36,24 @@ public class CreateCustomerView extends VerticalLayout {
 
             createCustomerLayout.getSave().setText("Create new customer.");
             createCustomerLayout.getSave().addClickListener(onClick -> {
-                final var savedCustomer = customerClient.create(
+
+                final var saveResponse = customerClient.create(
                         new CreateCustomerRequest()
                                 .withFirstName(createCustomerLayout.getFirstName().getValue())
                                 .withFamilyName(createCustomerLayout.getLastName().getValue())
                                 .withCompanyName(createCustomerLayout.getCompanyName().getValue())
                                 .withDateOfBirth(
                                         createCustomerLayout.getDateOfBirth().getValue()
-                                                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT))
-                                )
+                                                .format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)))
                                 .withTitle(createCustomerLayout.getTitle().getValue())
                                 .withNote(createCustomerLayout.getNote().getValue())
-                                .withUserId(Long.valueOf(user.getId()))
-                );
+                                .withUserId(Long.valueOf(user.getId())));
 
-                if (savedCustomer.isEmpty()) {
+                if (!saveResponse.getStatusCode().is2xxSuccessful()) {
                     Notification.show("Customer could NOT be saved.").open();
                 } else {
 
-                    final var customer = savedCustomer.get();
+                    final var customer = saveResponse.getBody();
 
                     Notification.show(
                             "New Customer: "
@@ -65,7 +66,6 @@ public class CreateCustomerView extends VerticalLayout {
                 }
 
             });
-
 
             add(createCustomerLayout);
         }
